@@ -1,6 +1,23 @@
 let configuredMinutes = TimerSettings.load();
 const timeDisplay = document.querySelector(".time");
 const timerMessage = document.querySelector(".timer-message");
+const currentTimeDisplay = document.getElementById("current-time");
+const clockFormatter = new Intl.DateTimeFormat("ko-KR", {
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hourCycle: "h23",
+});
+
+function renderCurrentTime() {
+  const now = new Date();
+  currentTimeDisplay.textContent = clockFormatter.format(now);
+  currentTimeDisplay.dateTime = now.toISOString();
+}
+
+renderCurrentTime();
+setInterval(renderCurrentTime, 1000);
+window.addEventListener("pageshow", renderCurrentTime);
 
 let remainingTime = configuredMinutes * 60 * 1000;
 let endTime = null;
