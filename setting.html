@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setting · pomodoro</title>
+    <link rel="stylesheet" href="setting.css" />
+    <script src="timer-settings.js" defer></script>
+    <script src="setting.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>작은 몰입, 쌓이는 하루</span></a>
+        <a class="back-link" href="index.html">← 타이머로 돌아가기</a>
+      </header>
+      <main>
+        <div class="intro">
+          <p class="eyebrow">FIND YOUR OWN RHYTHM</p>
+          <h3>setting<span aria-hidden="true">.</span></h3>
+          <p class="description">나에게 맞는 집중 시간을 설정해 보세요.</p>
+        </div>
+        <form id="settings-form" class="timer-card">
+          <span class="focus-badge"><span aria-hidden="true"></span>집중 시간 설정</span>
+          <label class="field-label" for="timer-minutes">타이머 시간</label>
+          <div class="input-wrap">
+            <input id="timer-minutes" name="timer-minutes" type="number" min="1" max="60" step="1" value="25" required aria-describedby="time-help save-message" />
+            <span>분</span>
+          </div>
+          <p id="time-help" class="field-help">1분부터 60분까지, 1분 단위로 설정할 수 있어요.</p>
+          <p id="save-message" class="save-message" role="status" aria-live="polite"></p>
+          <button id="save-button" class="button button-primary" type="submit">설정 완료</button>
+          <p class="card-note">저장한 시간으로 타이머를 새롭게 시작해요.</p>
+        </form>
+      </main>
+      <footer><span>ONE THING AT A TIME.</span><span>오늘도, 한 걸음 더.</span></footer>
+    </div>
+  </body>
+</html>

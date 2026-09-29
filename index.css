@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+:root {
+  color-scheme: light;
+  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  color: #283f35;
+  background: #f5f4ee;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid #c18743; outline-offset: 5px; }
+svg { width: 20px; height: 20px; flex-shrink: 0; }
+.app { max-width: 1120px; min-height: 100svh; margin: auto; padding: 0 40px; display: flex; flex-direction: column; }
+.header { height: 102px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dddfd4; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #526054; font-size: 13px; font-weight: 600; }
+.brand-mark { width: 23px; height: 26px; border: 2px solid #325843; border-radius: 12px 12px 10px 10px; position: relative; transform: rotate(-8deg); }
+.brand-mark::before { content: ""; position: absolute; width: 9px; height: 5px; left: 8px; top: -6px; background: #325843; border-radius: 7px 0; }
+.settings { display: flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid #d8ddd1; border-radius: 9px; background: transparent; color: #526054; font-size: 13px; }
+.settings svg circle { fill: #f5f4ee; }
+main { width: 100%; max-width: 560px; margin: 49px auto 45px; }
+.intro { text-align: center; }
+.eyebrow { margin: 0 0 12px; font-size: 10px; font-weight: 600; letter-spacing: 2.3px; color: #7b8576; }
+h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(48px, 8vw, 64px); letter-spacing: -3px; line-height: 1.1; }
+h1 span { color: #c38758; }
+.description { margin: 19px 0 29px; color: #737b70; font-size: 13px; line-height: 1.8; word-break: keep-all; }
+.timer-card { padding: 26px 32px 23px; border: 1px solid #e0e3d8; border-radius: 23px; background: #fffefa; box-shadow: 0 12px 35px #344c3010; }
+.card-top { display: flex; align-items: center; justify-content: space-between; }
+.focus-badge { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border-radius: 20px; background: #eef2e6; color: #536a43; font-size: 11px; font-weight: 600; }
+.focus-badge > span { width: 6px; height: 6px; border-radius: 50%; background: #72874f; }
+.session { font-size: 10px; letter-spacing: 1.5px; color: #8b9285; }
+.timer-face { width: 284px; max-width: 100%; aspect-ratio: 1; margin: 23px auto 27px; border: 6px solid #dae2c7; border-radius: 50%; padding: 7px; position: relative; }
+.timer-face::before { content: ""; position: absolute; width: 10px; height: 10px; background: #6a8150; border: 3px solid #fffefa; box-sizing: content-box; border-radius: 50%; top: -11px; left: calc(50% - 8px); }
+.timer-content { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #edf0e5; border-radius: 50%; background: #fafbf6; }
+.timer-label { margin: 0 0 10px; color: #76816d; font-size: 12px; }
+.time { margin: 0; font-size: clamp(48px, 13vw, 66px); font-weight: 400; line-height: 1.15; letter-spacing: -3px; font-variant-numeric: tabular-nums; }
+.time span { color: #849176; }
+.timer-message { margin: 13px 0 0; color: #85907c; font-size: 11px; }
+.controls { display: grid; grid-template-columns: 1fr 1.35fr 1fr; gap: 10px; }
+.button { min-height: 49px; display: flex; justify-content: center; align-items: center; gap: 7px; border-radius: 10px; font-size: 13px; font-weight: 600; transition: background-color .15s, transform .15s; }
+.button:active { transform: translateY(1px); }
+.button-primary { border: 1px solid #31563f; background: #31563f; color: #fffefa; box-shadow: 0 4px 9px #31563f18; }
+.button-primary:hover { background: #264632; }
+.button-secondary { border: 1px solid #e1e5d9; background: #f7f8f2; color: #63705b; }
+.button-secondary:hover, .settings:hover { background: #e9eddf; }
+.button svg { width: 17px; height: 17px; }
+.card-note { margin: 20px 0 0; text-align: center; font-size: 11px; color: #8b9183; }
+.rhythm { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 25px; padding: 0 8px; }
+.rhythm-icon { color: #a1ab87; font-size: 34px; }
+.rhythm h2 { margin: 0 0 6px; font-size: 12px; font-weight: 500; color: #67725c; }
+.rhythm p { margin: 0; font-size: 11px; line-height: 1.7; color: #8a9081; word-break: keep-all; }
+footer { margin-top: auto; padding: 23px 0; display: flex; justify-content: space-between; border-top: 1px solid #dddfd4; color: #8a9281; font-size: 10px; letter-spacing: 1.1px; }
+footer span:last-child { letter-spacing: 0; }
+
+@media (max-width: 540px) {
+  .app { padding: 0 22px; }
+  .header { height: 80px; }
+  .brand { font-size: 11px; gap: 9px; }
+  .settings { padding: 8px 10px; font-size: 12px; }
+  main { margin: 36px auto; }
+  .description { font-size: 12px; margin-bottom: 24px; }
+  .timer-card { padding: 21px 18px; }
+  .timer-face { width: 258px; }
+  .controls { gap: 7px; }
+  .button { gap: 5px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}

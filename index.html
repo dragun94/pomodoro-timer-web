@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f4ee" />
+    <title>pomodoro · 나만의 집중 시간</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="timer-settings.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <a class="brand" href="index.html" aria-label="pomodoro 홈">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>작은 몰입, 쌓이는 하루</span>
+        </a>
+        <form action="setting.html">
+        <button class="settings" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg>
+          설정
+        </button>
+        </form>
+      </header>
+
+      <main>
+        <div class="intro">
+          <p class="eyebrow">MAKE TIME FOR WHAT MATTERS</p>
+          <h1>pomodoro<span aria-hidden="true">.</span></h1>
+          <p class="description">잠시 다른 생각은 내려두고, 한 가지에 집중해 보세요.</p>
+        </div>
+
+        <section class="timer-card" aria-label="집중 타이머">
+          <div class="card-top">
+            <span class="focus-badge"><span aria-hidden="true"></span>집중 시간</span>
+            <span class="session">SESSION 01</span>
+          </div>
+          <div class="timer-face">
+            <div class="timer-content">
+              <p class="timer-label">남은 시간</p>
+              <p class="time" aria-label="25분 0초">25<span>:</span>00</p>
+              <p class="timer-message">지금, 나에게 집중할 시간</p>
+            </div>
+          </div>
+          <div class="controls" aria-label="타이머 제어">
+            <button id="stop-button" class="button button-secondary" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5" width="3" height="14" rx="1"/><rect x="14" y="5" width="3" height="14" rx="1"/></svg>
+              정지
+            </button>
+            <button id="start-button" class="button button-primary" type="button">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5a1 1 0 0 1 1.5-.86l10 6.5a1 1 0 0 1 0 1.72l-10 6.5A1 1 0 0 1 8 18.5z"/></svg>
+              시작
+            </button>
+            <button id="reset-button" class="button button-secondary" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg>
+              초기화
+            </button>
+          </div>
+          <p class="card-note">25분의 몰입 뒤에는, 5분의 여유를.</p>
+        </section>
+
+        <aside class="rhythm" aria-label="뽀모도로 이용 안내">
+          <span class="rhythm-icon" aria-hidden="true">✳</span>
+          <div><h2>서두르지 않아도 괜찮아요.</h2><p>작은 집중을 반복하며 나만의 리듬을 만들어 가세요.</p></div>
+        </aside>
+      </main>
+
+      <footer><span>ONE THING AT A TIME.</span><span>오늘도, 한 걸음 더.</span></footer>
+    </div>
+  </body>
+</html>
